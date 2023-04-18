@@ -22,4 +22,4 @@ pytz==2023.3
 regex==2022.10.31
 scikit-learn==1.0.2
 scipy==1.7.3
-sklearn==0.0.post4
+
