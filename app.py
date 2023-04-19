@@ -12,9 +12,9 @@ app=Flask(__name__)
 @app.route('/',methods=['POST'])
 def predict():
   
-   with open('vectoriser-ngram-(1,2).pickle', 'rb') as f:
-     vectorizer = pickle.load(f)
-
+  with open('vectoriser-ngram-(1,2).pickle', 'rb') as f:
+      vectorizer = pickle.load(f)
+ 
   with open('Sentiment-LR.pickle', 'rb') as f:
       model = pickle.load(f)
   shortcode= request.form.to_dict()
