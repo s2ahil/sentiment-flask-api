@@ -11,7 +11,7 @@ app=Flask(__name__)
 
 @app.route('/',methods=['POST'])
 def predict():
-  
+  print('pahucha ki nahi lawda')
   with open('vectoriser-ngram-(1,2).pickle', 'rb') as f:
       vectorizer = pickle.load(f)
  
@@ -103,4 +103,4 @@ def predict():
 
 if __name__ =="__main__":
 
-  app.run(debug=True)
+  app.run()
