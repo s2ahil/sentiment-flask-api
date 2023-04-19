@@ -29,5 +29,5 @@ tzdata==2023.3
 Werkzeug==2.2.3
 regex
 scikit-learn
-scipy==1.7.3
+scipy
 gunicorn==20.1.0
