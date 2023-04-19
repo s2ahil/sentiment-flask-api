@@ -17,11 +17,7 @@ def predict():
   print(values)
   text=values
 
-  with open('vectoriser-ngram-(1,2).pickle', 'rb') as f:
-    vectorizer = pickle.load(f)
-
-  with open('Sentiment-LR.pickle', 'rb') as f:
-      model = pickle.load(f)
+ 
   
   # Defining dictionary containing all emojis with their meanings.
   emojis = {':)': 'smile', ':-)': 'smile', ';d': 'wink', ':-E': 'vampire', ':(': 'sad', 
@@ -100,4 +96,9 @@ def predict():
   return df['sentiment'].to_json()
 
 if __name__ =="__main__":
-    app.run(debug=True)
+  with open('vectoriser-ngram-(1,2).pickle', 'rb') as f:
+    vectorizer = pickle.load(f)
+
+  with open('Sentiment-LR.pickle', 'rb') as f:
+      model = pickle.load(f)
+  app.run(debug=True)
