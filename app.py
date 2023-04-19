@@ -11,6 +11,12 @@ app=Flask(__name__)
 
 @app.route('/',methods=['POST'])
 def predict():
+  
+   with open('vectoriser-ngram-(1,2).pickle', 'rb') as f:
+     vectorizer = pickle.load(f)
+
+  with open('Sentiment-LR.pickle', 'rb') as f:
+      model = pickle.load(f)
   shortcode= request.form.to_dict()
   # Get a list of all the values
   values = list(shortcode.values())
@@ -96,9 +102,5 @@ def predict():
   return df['sentiment'].to_json()
 
 if __name__ =="__main__":
-  with open('vectoriser-ngram-(1,2).pickle', 'rb') as f:
-    vectorizer = pickle.load(f)
 
-  with open('Sentiment-LR.pickle', 'rb') as f:
-      model = pickle.load(f)
   app.run(debug=True)
