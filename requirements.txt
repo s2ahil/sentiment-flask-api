@@ -28,9 +28,7 @@ threadpoolctl==3.1.0
 tqdm==4.65.0
 tzdata==2023.3
 Werkzeug==2.2.3
-=======
 regex==2022.10.31
 scikit-learn==1.0.2
 scipy==1.7.3
 gunicorn==20.1.0
->>>>>>> ba67c74695ba859c7ea1c1e35c13f5ca476997c7
