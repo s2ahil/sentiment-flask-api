@@ -30,7 +30,7 @@ def predict():
   print(values)
   text=values
 
-  with open('./vectoriser-ngram-(1,2).pickle', 'rb') as f:
+  with open('vectoriser-ngram-(1,2).pickle', 'rb') as f:
     vectorizer = pickle.load(f)
 
   with open('Sentiment-LR.pickle', 'rb') as f:
