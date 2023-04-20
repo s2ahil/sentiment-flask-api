@@ -22,7 +22,8 @@ def hello_world():
 #   text=values
 #   json_data = json.dumps(text)
 #   return json_data
-@app.route('/',methods=['POST'])
+
+@app.route('/predict',methods=['POST'])
 def predict():
   shortcode= request.form.to_dict()
   # Get a list of all the values
