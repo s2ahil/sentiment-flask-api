@@ -1,7 +1,11 @@
-
-# A very simple Flask Hello World app for you to get started with...
-
 from flask import *
+from flask import *
+import pickle
+
+import json
+from nltk.stem import WordNetLemmatizer
+import re
+import pandas as pd
 
 app = Flask(__name__)
 
